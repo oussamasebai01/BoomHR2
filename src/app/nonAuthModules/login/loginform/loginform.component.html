@@ -1,0 +1,26 @@
+<app-auth-layout>
+
+  <h3 class="card-title text-center mb-4">SignIn </h3>
+  <div class="card-text">
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()" class="my-4  mx-3">
+
+      <app-input type='text' className="form-control form-control-sm" controlName='email'
+        [controller]='loginForm.controls.email' [formGroup]='loginForm' label='Email Address'
+        errorMgs1='Email is required' errorMgs2='Enter Right Email format'></app-input>
+
+
+      <app-input type='password' className="form-control form-control-sm" controlName='password'
+        [controller]='loginForm.controls.password' [formGroup]='loginForm' label='Password'
+        errorMgs1='Password is required' errorMgs2='Enter atleast 3 Characters'></app-input>
+
+      <button type="submit" [disabled]="this.loginForm.invalid" class="btn btn-primary btn-block my-4">Sign in</button>
+
+      <div class="info-text text-center">
+        Don't have an account? <a routerLink="/auth/register">Create One</a>
+      </div>
+    </form>
+
+  </div>
+
+
+</app-auth-layout>

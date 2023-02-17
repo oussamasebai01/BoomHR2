@@ -1,0 +1,24 @@
+<app-auth-layout>
+  <h3 class="card-title text-center mb-4 text-success">SignUp </h3>
+  <div class="card-text">
+    <form [formGroup]="registerFormModal" (ngSubmit)="handleSubmit()" class="my-4  mx-3">
+      <app-input type='text' className="form-control form-control-sm" controlName='username'
+        [controller]='registerFormModal.controls.username' [formGroup]='registerFormModal' label='User Name'
+        errorMgs1='User Name is required' errorMgs2='Enter Right Email format'></app-input>
+
+      <app-input type='text' className="form-control form-control-sm" controlName='email'
+        [controller]='registerFormModal.controls.email' [formGroup]='registerFormModal' label='Email'
+        errorMgs1='email is required' errorMgs2='Enter Right Email format'></app-input>
+
+      <app-input type='password' className="form-control form-control-sm" controlName='password'
+        [controller]='registerFormModal.controls.password' [formGroup]='registerFormModal' label='Password'
+        errorMgs1='Password is required' errorMgs2='Enter Right Password format'></app-input>
+
+      <button type="submit" class="btn  btn-block btn-primary my-4 ">Submit</button>
+    </form>
+    <div class="text-center">
+      <span> Already Have Account <a routerLink="/auth/login"> Sign In </a></span>
+    </div>
+  </div>
+
+</app-auth-layout>
