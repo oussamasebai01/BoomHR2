@@ -6,25 +6,28 @@ import { Component, OnInit } from '@angular/core';
     <div>
     <app-header></app-header>
     <div class=" wrapper d-flex justify-content-center align-items-center">
-    <div class="card form">
-		<div class="card-body">
     <ng-content> </ng-content>
    </div>
    </div>
-    </div>
-    </div>
   `,
   styles: [
     `.wrapper{
       height:90vh;
     }
     .form{
-      width:350px;
+      width:600px;
        box-shadow:7px 5px 20px #968b8b3d;
     }
     .info-text{
-      font-size:12px;
+      font-size:20px;
     }
+    .fm {
+      width:1080px;
+      
+    }
+    .app-input {
+  height: 100%;
+}
 `
   ]
 })

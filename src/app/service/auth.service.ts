@@ -50,7 +50,7 @@ export class AuthService {
   }
 
   registerUser(data) {
-    return this.Http.post(apiUrl + 'register', data).pipe(
+    return this.Http.post(apiUrl + 'Register', data).pipe(
       catchError((err) => {
         const { error } = err;
 
